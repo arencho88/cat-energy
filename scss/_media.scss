@@ -56,6 +56,7 @@
 
 
 
+
 @media (min-width: 768px) {
 	// logo ---------------------------/
 	.logo {
@@ -68,11 +69,16 @@
 		justify-content: space-between;
 		width: 768px;
 		padding: 0 30px;
+		margin: 0 auto 62px auto;
+		&::after {
+			display: none;
+		}
 		&__burger-btn {
 			display: none;
 		}
 		&__list {
 			display: flex;
+			align-items: flex-start;
 			flex-wrap: wrap;
 			width: 485px;
 			padding: 19px 0 0;
@@ -81,14 +87,132 @@
 		&__item {
 			margin-right: 35px;
 		}
+		&__item--current {
+			position: relative;
+			&::after {
+				content: '';
+
+				height: 2px;
+
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+
+				background-color: #68b738;
+			}
+		}
 		&__link {
-			padding: 11px 0;
+			padding: 9px 0;
 			border: none;
 
 			@include os400;
 			font-size: 18px;
 			line-height: 24px;
 			color: #222;
+		}
+	}
+
+	// func-food ----------------------/
+	.func-food {
+		width: 768px;
+		min-height: 808px;
+		padding: 0 30px;
+
+		background-image: url(../images/func-food-tablet.jpg);
+		background-repeat: no-repeat;
+		background-position: center 100%;
+		&__title {
+			width: 427px;
+			padding: 0 0 32px;
+			margin: 0 0 0 90px;
+
+			font-size: 60px;
+			line-height: 60px;
+			color: #000;
+			text-align: left;
+		}
+		&__slogan {
+			margin: 0 0 55px 90px;
+
+			font-size: 20px;
+			line-height: 20px;
+			text-align: left;
+			color: #000;
+		}
+		&__img-box {
+			display: none;
+		}
+		&__btn {
+			display: inline-block;
+			padding: 17px 29px 15px 26px;
+			margin: 0 0 0 90px;
+
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+}
+
+
+
+@media (min-width: 1440px) {
+	// header -------------------------/
+	.header {
+		width: 1440px;
+		min-height: 696px;
+		margin: 0 auto;
+		padding: 0 110px;
+
+		background-image: url(../images/func-food-desktop.png),
+								url(../images/func-food-bg-desktop.jpg);
+		background-repeat: no-repeat;
+		background-position: 560px 142px, 100% 0;
+	}
+
+	// logo ---------------------------/
+	.logo {
+		padding: 54px 0 0;
+	}
+
+	// nav ----------------------------/
+	.nav {
+		width: auto;
+		padding: 0;
+		margin: 0 auto 113px auto;
+		&__list {
+			width: 515px;
+			padding: 63px 0 0;
+		}
+		&__item--current {
+			&::after {
+				background-color: #fff;
+			}
+		}
+		&__link {
+			padding: 12px 0;
+
+			font-size: 20px;
+			line-height: 20px;
+			color: #fff;
+		}
+	}
+
+	// func-food ----------------------/
+	.func-food {
+		width: auto;
+		min-height: auto;
+		padding: 0 0 0 80px;
+
+		background-image: none;
+		&__title {
+			margin: 0;
+		}
+		&__slogan {
+			margin: 0 0 55px;
+		}
+		&__btn {
+			margin: 0;
 		}
 	}
 }
