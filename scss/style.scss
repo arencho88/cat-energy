@@ -1,0 +1,75 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+
+
+
+.test {
+	background-color: #666;
+	min-height: 50px;
+	text-align: center;
+	color: #e6e6e6;
+}
+
+// logo ------------------------------/
+.logo {
+	display: block;
+	width: 212px;
+	padding: 11px 0 16px 20px;
+
+	border-bottom: 1px solid #e6e6e6;
+	&__img {
+		display: block;
+		width: 192px;
+		height: 38px;
+	}
+}
+
+// nav -------------------------------/
+.nav {
+	width: 320px;
+	min-height: 66px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	position: relative;
+
+	transition: max-height linear 0.5s;
+	&__burger-btn {
+		position: absolute;
+
+		top: 21px;
+		right: 20px;
+
+		display: block;
+		width: 24px;
+		height: 18px;
+		padding: 0;
+		border: none;
+
+		background-color: transparent;
+		cursor: pointer;
+	}
+	&__list {
+		@include reset-ul;
+	}
+	&__link {
+		display: block;
+		padding: 22px 0 23px;
+
+		@include os500;
+		font-size: 20px;
+		line-height: 20px;
+		color: #000;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		border-bottom: 1px solid #e6e6e6;
+	}
+}
+
+
+@import 'media';
