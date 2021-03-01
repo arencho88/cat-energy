@@ -163,6 +163,59 @@
 			line-height: 20px;
 		}
 	}
+
+	// services --------------------------/
+	.services {
+		width: 768px;
+		padding: 0 30px;
+		&__item {
+			padding: 80px 60px 62px 52px;
+			margin: 0 0 30px;
+		}
+		&__title {
+			margin: 0 0 22px 0;
+	
+			font-size: 36px;
+			line-height: 37px;
+		}		
+		&__text {
+			max-width: 380px;
+			margin: 0 0 56px;
+			padding: 0;
+			border: none;
+
+			font-size: 16px;
+			line-height: 24px;
+		}		
+		&__link {
+			padding: 0 50px 0 0;
+
+			font-size: 20px;
+			line-height: 20px;
+		}
+		&__item-icon {
+			top: 91px;
+			left: auto;
+			right: 61px;
+
+			width: 200px;
+			height: 200px;
+		}
+		&__item-icon--skinny {
+			&::after {
+				top: -13px;
+
+				width: 140px;
+				height: 194px;
+			}
+		}
+		&__item-icon--gain {
+			&::after {	
+				width: 268px;
+				height: 112px;
+			}
+		}		
+	}
 }
 
 
