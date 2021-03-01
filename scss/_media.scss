@@ -289,4 +289,50 @@
 			margin: 0;
 		}
 	}
+
+	// services --------------------------/
+	.services {
+		width: 1300px;
+		padding: 0 40px;
+		margin: 0 auto 40px auto;
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 0 0 -80px;
+		}
+		&__item {
+			width: 570px;
+			padding: 80px 55px 62px 52px;
+			margin: 0 0 30px 80px;
+		}
+		&__title {
+			margin: 0 0 70px 164px;
+		}		
+		&__text {
+			max-width: 100%;
+			margin: 0 0 32px;
+		}
+		&__item-icon {
+			top: 47px;
+			left: 52px;
+			right: auto;
+
+			width: 100px;
+			height: 100px;
+		}
+		&__item-icon--skinny {
+			&::after {
+				top: -4px;
+
+				width: 70px;
+				height: 97px;
+			}
+		}
+		&__item-icon--gain {
+			&::after {	
+				width: 134px;
+				height: 56px;
+			}
+		}		
+	}
 }
