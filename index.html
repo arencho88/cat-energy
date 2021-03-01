@@ -14,7 +14,10 @@
 				<span class="visually-hidden">открыть меню</span>
 			</button>
 			<a class="logo">
-				<img class="logo__img" src="images/logo-mobile.svg" width="192" height="38" alt="логотип">
+				<picture>
+					<source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+					<img class="logo__img" src="images/logo-mobile.svg" width="192" height="38" alt="логотип">
+				</picture>
 			</a>
 			<ul class="nav__list">
 				<li class="nav__item nav__item--current">
@@ -39,16 +42,15 @@
 			<p class="func-food__slogan">
 				Занялся собой? Займись котом!
 			</p>
-			<figure class="func-food__img-box">
+			<picture class="func-food__img-box">
+				<source media="(max-width: 768px)" srcset="images/func-food-mob@2x.png 2x">
 				<img class="func-food__img" src="images/func-food-mob.png" width="280" height="270" alt="функциональное питание для котов">
-			</figure>
+			</picture>
 			<a class="func-food__btn btn" href="#">Подобрать программу</a>
 		</section>		
 	</header>
-<!-- <div class="test">
-	КОНТЕНТ
-</div> -->
-	<!-- <main>
+
+	<main>
 		<section class="services">
 			<h2 class="visually-hidden">Услуги</h2>
 			<ul class="services__list">
@@ -63,22 +65,22 @@
 						вашему питомцу сбросить лишний вес.
 					</p>
 					<a class="services__link" href="#">Каталог Slim</a>
+					<span class="services__item-icon services__item-icon--skinny"></span>
 				</li>
 				<li class="services__item">
 					<h3 class="services__title">
-						Похудение
+						Набор массы
 					</h3>
 					<p class="services__text">
-						Ваш кот весит больше собаки и почти
-						утратил способность лазить по деревьям?
-						Пора на диету! Cat Energy Slim поможет
-						вашему питомцу сбросить лишний вес.
+						Заработать авторитет среди дворовых котов и даже собак?
+						Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
 					</p>
-					<a class="services__link" href="#">Каталог Slim</a>
+					<a class="services__link" href="#">Каталог pro</a>
+					<span class="services__item-icon services__item-icon--gain"></span>
 				</li>
 			</ul>
 		</section>
-		<section class="advantages">
+		<!-- <section class="advantages">
 			<h2 class="title">Как это работает</h2>
 			<ul class="advantages__list">
 				<li class="advantages__item">
@@ -167,10 +169,10 @@
 				<button class="example__prev-btn example__btn">Было</button>
 				<button class="example__next-btn example__btn">Стало</button>
 			</div>
-		</section>
+		</section> -->
 	</main>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="footer__map">
 			<div class="footer__info">
 				<b class="footer__slogan">

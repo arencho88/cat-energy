@@ -3,16 +3,6 @@
 @import 'fonts';
 
 
-
-
-
-.test {
-	background-color: #666;
-	min-height: 50px;
-	text-align: center;
-	color: #e6e6e6;
-}
-
 // logo ------------------------------/
 .logo {
 	display: block;
@@ -84,12 +74,17 @@
 // func-food -------------------------/
 .func-food {
 	width: 320px;
-	margin: 0 auto;
+	margin: 0 auto 22px auto;
 	padding: 0 20px;
 
 	background-image: url(../images/func-food-bg-mobile.jpg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
+	@media (min-resolution: 1.5dppx),
+			 (min-resolution: 144dpi) {
+				background-image: url(../images/func-food-bg-mobile@2x.jpg);
+				background-size: 320px auto;
+	}
 	&__title {
 		margin: 0;
 		padding: 29px 0 20px;
@@ -122,5 +117,107 @@
 		line-height: 18px;
 	}
 }
+
+// services --------------------------/
+.services {
+	width: 320px;
+	margin: 0 auto;
+	padding: 0 20px;
+	&__list {
+		@include reset-ul;
+	}
+	&__item {
+		padding: 32px 20px 23px;
+		margin: 0 0 20px;
+
+		position: relative;
+
+		background-color: #f2f2f2;
+	}
+	&__title {
+		margin: 0 0 30px 72px;
+
+		@include os400;
+		font-size: 24px;
+		line-height: 37px;
+		color: #111;
+		text-transform: uppercase;
+	}
+	&__text {
+		margin: 0 0 20px;
+		padding: 0 0 23px;
+
+		border-bottom: 1px solid #d9d9d9;
+	}
+	&__link {
+		display: inline-block;
+		padding: 0 36px 0 0;
+
+		position: relative;
+
+		@include os400;
+		font-size: 16px;
+		line-height: 16px;
+		color: #111;
+		text-transform: uppercase;
+		text-decoration: none;
+		&::after {
+			content: '';
+
+			width: 24px;
+			height: 11px;
+
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+
+			background-image: url(../images/icons/services-link-arrow.svg);
+		}
+		&:active {
+			opacity: 0.3;
+		}
+	}
+	&__item-icon {
+		position: absolute;
+		top: 25px;
+		left: 22px;
+
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+
+		background-color: #68b738;
+		&::after {
+			content: '';
+
+			position: absolute;
+			
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__item-icon--skinny {
+		&::after {
+			top: -2px;
+
+			width: 35px;
+			height: 49px;
+			background-image: url(../images/icons/skinny-cat.svg);
+		}
+	}
+	&__item-icon--gain {
+		&::after {
+			top: 50%;
+			transform: translate(-50%, -50%);
+
+			width: 67px;
+			height: 28px;
+			background-image: url(../images/icons/gain-cat.svg);
+		}
+	}
+}
+
+
 
 @import 'media';
