@@ -220,6 +220,82 @@
 	}
 }
 
+// advantages ------------------------/
+.advantages {
+	width: 320px;
+	margin: 0 auto;
+	padding: 0 20px 17px;
+	&__title {
+		margin: 0 0 23px;
+	}
+	&__list {
+		@include reset-ul;
+	}
+	&__item {
+		margin: 0 0 30px;
+
+		position: relative;
+		&::before {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+
+			width: 60px;
+			height: 60px;
+
+			background-color: #68b738;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+	&__item--helpful {
+		&::before {
+			background-image: url(../images/icons/advantage-1.png);
+			background-size: 26px 29px;
+			@media (min-resolution: 1.5dppx),
+					 (min-resolution: 144dpi) {
+						 background-image: url(../images/icons/advantage-1@2x.png);
+			}
+		}
+	}
+	&__item--cooking {
+		&::before {
+			background-image: url(../images/icons/advantage-2.png);
+			background-size: 29px 31px;
+			@media (min-resolution: 1.5dppx),
+					 (min-resolution: 144dpi) {
+						 background-image: url(../images/icons/advantage-2@2x.png);
+			}
+		}
+	}
+	&__item--change {
+		&::before {
+			background-image: url(../images/icons/advantage-3.png);
+			background-size: 23px 30px;
+			@media (min-resolution: 1.5dppx),
+					 (min-resolution: 144dpi) {
+						 background-image: url(../images/icons/advantage-3@2x.png);
+			}
+		}
+	}
+	&__item--result {
+		&::before {
+			background-image: url(../images/icons/advantage-4.png);
+			background-size: 26px 31px;
+			@media (min-resolution: 1.5dppx),
+					 (min-resolution: 144dpi) {
+						 background-image: url(../images/icons/advantage-4@2x.png);
+			}
+		}
+	}
+	&__text {
+		padding: 0 0 0 80px;
+		margin: 0;
+	}
+}
 
 
 @import 'media';
