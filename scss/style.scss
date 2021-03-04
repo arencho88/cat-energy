@@ -224,7 +224,7 @@
 .advantages {
 	width: 320px;
 	margin: 0 auto;
-	padding: 0 20px 17px;
+	padding: 0 20px 15px;
 	&__title {
 		margin: 0 0 23px;
 	}
@@ -297,5 +297,159 @@
 	}
 }
 
+// example ---------------------------/
+.example {
+	margin: 0 0 30px;
+
+	background-color: #f2f2f2;
+	&__inner {
+		width: 320px;
+		margin: 0 auto;
+		padding: 21px 20px 37px;
+	}
+	&__title {
+		margin: 0 0 20px;
+	}
+	&__text {
+		margin: 0 0 25px;
+	}
+	&__list {
+		@include reset-ul;
+
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 35px;
+	}
+	&__item {
+		width: 124px;
+		padding: 17px 0;
+		border: 1px solid #cdcdcd;
+		border-radius: 3px;
+
+		position: relative;
+
+		text-align: center;
+	}
+	&__value {
+		@include os400;
+		font-size: 24px;
+		line-height: 24px;
+
+		color: #000;
+	}
+	&__definition {
+		margin: 0;
+		padding: 0 10px;
+
+		position: absolute;
+		left: 18px;
+		right: 18px;
+		bottom: -15px;
+
+		font-size: 12px;
+		line-height: 12px;
+
+		background-color: #f2f2f2;
+	}
+	&__sum {
+		display: flex;
+		justify-content: center;
+		margin: 0 0 33px;
+
+		@include os400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #000;
+		text-transform: uppercase;
+		&-price {
+			margin-left: 3px;
+		}
+	}
+	&__slider-list {
+		@include reset-ul;
+
+		position: relative;
+
+		min-height: 240px;
+		margin: 0 0 33px;
+		overflow: hidden;
+	}
+	&__slider-item {
+		position: absolute;
+		bottom: 0;
+
+		width: 280px;
+
+		opacity: 0;
+
+		transition: opacity 0.3s;
+		&.example__slider-item--current {
+			opacity: 1;
+		}
+	}
+	&__slider-item--before {
+		left: -19px;
+	}
+	&__slider-item--after {
+		left: 23px;
+	}
+	&__slider-img {
+		display: block;
+	}
+	&__slider-toggles {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 200px;
+		margin: 0 auto;
+	}
+	&__btn {
+		padding: 0 0 7px;
+		border: none;
+		border-bottom: 1px dotted #bebebe;
+
+		@include os400;
+		font-size: 20px;
+		line-height: 20px;
+		color: #000;
+		text-transform: uppercase;
+
+		background-color: transparent;
+		cursor: pointer;
+		&:hover {
+			border-bottom: 1px solid #989898;
+		}
+		&:active {
+			border: none;
+		}
+	}
+	&__range {
+		width: 84px;
+		height: 14px;
+		margin: 3px 0 0;
+		border: 1px solid #cdcdcd;
+		border-radius: 6px;
+
+		position: relative;
+
+		background-color: #fff;
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			left: 5px;
+			transform: translateY(-50%);
+
+			width: 35px;
+			height: 6px;
+			border-radius: 6px;
+
+			background-color: #68b738;
+
+			transition: left 0.2s;
+		}
+	}
+}
 
 @import 'media';
