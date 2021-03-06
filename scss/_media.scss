@@ -430,6 +430,80 @@
 			}
 		}
 	}
+
+	// footer ----------------------------/
+	.footer {
+		background-image: linear-gradient(#fff 0px, #fff 134px, #f2f2f2 134px, #f2f2f2 100%);
+		&__inner {
+			width: 768px;
+		}
+		&__info {
+			margin: 0 0 60px;
+			padding: 0 70px;
+		}
+		&__slogan {
+			width: 165px;
+
+			font-size: 20px;
+			line-height: 25px;
+		}
+		&__address {
+			width: 165px;
+
+			font-size: 16px;
+			span {
+				display: block;
+				margin-top: 14px;
+			}
+		}
+		&__map-wrapper {
+			height: auto;
+		}
+		&__map-img {
+			position: static;
+
+		}
+		&__bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 60px 30px 55px;
+		}
+		&__logo {
+			margin: 0;
+		}
+		&__copy {
+			padding: 0;
+			&-text {
+				margin: 0 23px 0 0;
+			}
+		}
+	}
+
+	// social-networks -------------------/
+	.social-networks {
+		padding: 0;
+		margin: 0;
+		border: none;
+		&__list {
+			margin-left: -28px;
+		}
+		&__item {
+			margin-left: 28px;
+		}
+		&__icon--vk {
+			width: 30px;
+			height: 16px;
+		}
+		&__icon--inst {
+			width: 23px;
+			height: 23px;
+		}
+		&__icon--facebook {
+			width: 14px;
+			height: 28px;
+		}
+	}
 }
 
 
@@ -617,6 +691,70 @@
 		}
 		&__slider-toggles {
 			margin: 0 0 0 auto;
+		}
+	}
+
+	// footer ----------------------------/
+	.footer {
+		background-image: linear-gradient(#fff 0px, #fff 0, #f2f2f2 0, #f2f2f2 100%);
+		&__inner {
+			width: 1440px;
+		}
+		&__map {
+			position: relative;
+		}
+		&__info {
+			align-items: center;
+			width: 570px;
+			min-height: 200px;
+
+			position: absolute;
+			top: 50%;
+			left: 110px;
+			z-index: 2;
+
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 0 86px 0 78px;
+
+			background-color: #fff;
+		}
+		&__slogan {
+			width: 165px;
+
+			font-size: 20px;
+			line-height: 25px;
+		}
+		&__address {
+			width: 165px;
+
+			font-size: 16px;
+			span {
+				display: block;
+				margin-top: 14px;
+			}
+		}
+		&__map-wrapper {
+			height: auto;
+		}
+		&__map-img {
+			position: static;
+
+		}
+		&__bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 60px 110px 55px;
+		}
+		&__logo {
+			margin: 0;
+		}
+		&__copy {
+			padding: 0;
+			&-text {
+				margin: 0 23px 0 0;
+			}
 		}
 	}
 }
