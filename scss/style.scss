@@ -570,4 +570,217 @@
 	}
 }
 
+
+// страница каталога ===========================/
+.catalog-page-title {
+	width: 320px;
+	margin: 20px auto;
+	padding: 0 20px;
+}
+// catalog ---------------------------/
+.catalog {
+	width: 320px;
+	margin: 0 auto 30px;
+	&__list  {
+		@include reset-ul;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px 25px;
+		border-top: 1px solid #ededed;
+		border-bottom: 1px solid #ededed;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__info {
+		width: 140px;
+		order: 2;
+	}
+	&__title {
+		&-link {
+			display: block;
+			width: 85px;
+			margin: 22px 0 12px;
+	
+			@include os400;
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #444;
+		}
+	}
+	&__table {
+		width: 100%;
+
+		font-size: 12px;
+		line-height: 12px;
+	}
+	&__cell:last-child {
+		text-align: right;
+	}
+	&__picture {
+		order: 1;
+	}
+	&__img {
+		display: block;
+	}
+	&__btn {
+		order: 3;
+	}
+	&__more {
+		text-align: center;
+		&-icon {
+			width: 30px;
+			height: 30px;
+			margin: 26px auto 24px;
+
+			position: relative;
+			&::before,
+			&::after {
+				content: '';
+
+				position: absolute;
+
+				width: 30px;
+				height: 2px;
+
+				background-color: #d3d3d3;
+			}
+			&::before {
+				top: 50%;
+				left: 0;
+
+				transform: translateY(-50%);
+			}
+			&::after {
+				top: 50%;
+				left: 50%;
+
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+		}
+		&-text {
+			margin: 0 0 7px;
+
+			@include os400;
+			font-size: 16px;
+			line-height: 20px;
+			color: #000;
+			text-transform: uppercase;
+		}
+		&-descr {
+			margin: 0 0 20px;
+
+			font-size: 12px;
+			line-height: 16px;
+		}
+		&-btn {
+			padding: 10px 0;
+
+			color: #444;
+
+			background-color: #f2f2f2;
+			&:hover {
+				background-color: #ebebeb;
+			}
+			&:active {
+				color: rgba($color: #000000, $alpha: 0.3)
+			}
+		}
+	}
+}
+
+// additional ------------------------/
+.additional {
+	position: relative;
+	&::before {
+		content: '';
+
+		width: 50%;
+		height: 3px;
+
+		position: absolute;
+		top: 14px;
+		right: 0;
+
+		background-color: #68b738;
+	}
+	&__inner {
+		width: 320px;
+		margin: 0 auto 35px;
+		padding: 0 20px;
+	}
+	&__title {
+		width: 250px;
+		margin: 0 0 30px;
+
+		position: relative;
+
+		@include os400;
+		font-size: 24px;
+		line-height: 24px;
+
+		background-color: #fff;
+	}
+	&__list {
+		@include reset-ul;
+
+		margin: 0 0 40px;
+	}
+	&__item {
+		padding: 14px 0 17px;
+		border-top: 1px solid #cdcdcd;
+		border-bottom: 1px solid #cdcdcd;
+		&-title {
+			margin: 0 0 16px;
+
+			@include os400;
+			font-size: 16px;
+			line-height: 16px;
+			color: #222;
+		}
+	}
+	&__table {
+		width: 100%;
+	}
+	&__cell {
+		line-height: 14px;
+		&:last-child {
+			text-align: right;
+		}
+	}
+	&__btn {
+		margin: 14px 0 0;
+	}
+	&__present {
+		height: 289px;
+
+		text-align: center;
+
+		background-image: url(../images/additional-gift-bg-mobile.jpg);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		@media (min-resolution: 1.5dppx),
+				 (min-resolution: 144dpi) {
+					 background-image: url(../images/additional-gift-bg-mobile@2x.jpg);
+					 background-size: 280px 289px;
+		}
+	}
+	&__present-icon {
+		margin: 65px 0 60px;
+	}
+	&__present-text {
+		width: 170px;
+		margin: 0 auto;
+
+		font-size: 16px;
+		line-height: 20px;
+		color: #fff;
+	}
+}
+
 @import 'media';
