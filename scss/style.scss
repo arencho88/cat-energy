@@ -600,6 +600,7 @@
 		order: 2;
 	}
 	&__title {
+		margin: 0;
 		&-link {
 			display: block;
 			width: 85px;
@@ -742,6 +743,7 @@
 			font-size: 16px;
 			line-height: 16px;
 			color: #222;
+			text-transform: uppercase;
 		}
 	}
 	&__table {
@@ -781,6 +783,14 @@
 		line-height: 20px;
 		color: #fff;
 	}
+}
+
+// footer страницы каталога ----------/
+.catalog-page-footer {
+	padding: 30px 0 0;
+
+	background-color: #f2f2f2;
+	background-image: none;
 }
 
 @import 'media';
