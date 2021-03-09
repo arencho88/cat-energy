@@ -695,6 +695,178 @@
 
 		background-image: none;
 	}
+
+
+
+
+	// страница подбора программы ========/
+	.form-page-title {
+		width: 768px;
+		padding: 0 30px;
+		margin: 0 auto 50px;
+	}
+	.form-page-info {
+		width: 768px;
+		padding: 0 70px;
+		margin: 0 auto 60px;
+
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.form {
+		margin: 0 0 70px;
+		&__group {
+			width: 768px;
+			padding: 0 30px;
+		}
+		&__group--text {
+			margin: 0 auto 50px;
+		}
+		&__label {
+			font-size: 20px;
+			line-height: 20px;
+		}
+		&__label--text {
+			margin: 0 0 20px;
+			padding: 0 40px;
+		}
+		&__text-inp {
+			padding: 10px 50px 10px 20px;
+
+			font-size: 20px;
+			line-height: 20px;
+		}
+		&__group--radio {
+			width: 630px;
+			padding: 25px 28px 0;
+			margin-bottom: 80px;
+			border: 1px solid #ededed;
+			// добавляем флажок при выбранном радио-инпуте/
+			input[type="radio"]:checked {
+				& + .form__radio-indicator::after {					 
+					width: 18px;
+					height: 18px;			
+				}
+			}
+		}
+		&__radio-indicator {
+			width: 40px;
+			height: 40px;
+		}
+		&__group--contacts {
+			padding: 0 30px;
+			margin: 0 auto 50px;
+		}
+		&__title {
+			padding: 0 40px;
+			margin: 0 0 70px;
+
+			font-size: 36px;
+			line-height: 36px;
+			&::after {
+				top: 20px;
+			}
+			&::before {
+				content: '';
+
+				position: absolute;
+				top: 20px;
+				right: 0;
+				z-index: -1;
+	
+				width: 100vw;
+				height: 2px;
+	
+				background-color: #68b738;
+			}
+		}
+		&__title--contacts {
+			width: auto;
+		}
+		&__input-icon {
+			right: 62px;
+		}
+		&__input-icon--phone {
+			right: 59px;
+		}
+		&__group--textarea {
+			margin: 0 auto 66px;
+		}
+		&__textarea {
+			display: block;
+			width: 630px;
+			height: 174px;
+			margin: 0 auto;
+			padding: 15px 20px;
+
+			font-size: 20px;
+			line-height: 30px;
+		}
+		&__group--checkbox {
+			margin: 0 auto 20px;
+		}
+		&__title--checkbox {
+			margin: 0 0 50px;
+		}
+		&__checkbox-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 40px;
+			margin: 0 0 0 -60px;
+		}
+		&__label--checkbox {
+			width: 284px;
+			margin: 0 0 30px 60px;
+		}
+		&__checkbox-indicator {
+			width: 30px;
+			height: 30px;
+			margin: 0 15px 0 0;
+			border: 1px solid #cfcfcf;
+
+			position: relative;
+			&::after {
+				content: '';
+
+				position: absolute;
+				top: 0;
+				left: 9px;
+
+				width: 12px;
+				height: 20px;
+				border: solid #68b738;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg) scale(0);
+
+				transition: all 0.2s;
+			}
+		}
+		&__group--checkbox {
+			// добавляем флажок при выбранном чекбоксе/
+			input[type="checkbox"]:checked {
+				& + .form__checkbox-indicator::after {
+					transform: rotate(45deg) scale(1);
+				}
+			}
+		}
+		&__bottom {
+			width: 708px;
+			display: flex;
+			align-items: center;
+			margin: 0 auto;
+			padding: 0 40px;
+		}
+		&__submit-btn {
+			width: 284px;
+			margin: 0;
+		}
+		&__descr {
+			width: 190px;
+			margin: 0 0 0 60px;
+
+			font-size: 16px;
+		}
+	}
 }
 
 
@@ -1065,5 +1237,95 @@
 	// footer страницы каталога -------/
 	.catalog-page-footer {
 		padding:0;
+	}
+
+
+
+
+	// страница подбора программы ========/
+	.form-page-title {
+		width: 1440px;
+		padding: 0 110px;
+	}
+	.form-page-info {
+		width: 1440px;
+		padding: 0 110px;
+	}
+	.form {
+		width: 1440px;
+		padding: 0 70px;
+		margin: 0 auto 80px;
+		&__group-wrapper {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 0 70px;
+			padding: 0 40px;
+		}
+		&__group {
+			width: auto;
+			padding: 0 40px;
+			margin: 0;
+		}
+		&__group--text {
+			width: 570px;
+			margin: 0;
+			padding: 0;
+			.form__label--text:last-child {
+				margin: 0;
+			}
+		}
+		&__label--text {
+			padding: 0;
+		}
+		&__group--radio {
+			width: 570px;
+			padding: 23px 28px 10px;
+			margin-bottom: 0;
+		}
+		&__group--contacts {
+			padding: 0;
+			margin: 0 auto;
+		}
+		&__group--contacts {
+			.form__label--text {
+				width: 570px;
+				margin: 0;
+			}
+		}
+		&__input-icon {
+			right: 20px;
+		}
+		&__input-icon--phone {
+			right: 20px;
+		}
+		&__group--textarea {
+			padding: 0;
+			margin: 0 auto 66px;
+		}
+		&__textarea {
+			width: 1220px;
+			margin: 0 auto;
+		}
+		&__group--checkbox {
+			margin: 0 auto 30px;
+			padding: 0;
+		}
+		&__checkbox-wrapper {
+			margin: 0 0 0 -80px;
+		}
+		&__label--checkbox {
+			width: 245px;
+			margin: 0 0 30px 80px;
+		}
+		&__bottom {
+			width: 1220px;
+			padding: 0;
+		}
+		&__submit-btn {
+			width: 570px;
+		}
+		&__descr {
+			margin: 0 0 0 80px;
+		}
 	}
 }

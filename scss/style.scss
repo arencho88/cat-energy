@@ -799,6 +799,245 @@
 
 
 // страница подбора программы ========/
+.form-page-title {
+	width: 320px;
+	padding: 0 20px;
+	margin: 18px auto 20px;
+}
+.form-page-info {
+	width: 320px;
+	padding: 0 20px;
+	margin: 0 auto 38px;
 
+	@include os400;
+	color: #111;
+	text-transform: uppercase;
+}
+.form {
+	margin: 0 0 32px;
+	&__group {
+		width: 320px;
+		padding: 0 20px;
+		margin: 0 auto;
+		border: none
+	}
+	&__group--text {
+		margin: 0 auto 9px;
+	}
+	&__label {
+		display: flex;
+		align-items: center;
+
+		@include os400;
+		font-size: 16px;
+		line-height: 18px;
+		color: #222;
+		text-transform: uppercase;
+	}
+	&__label--text {
+		position: relative;
+
+		margin: 0 0 14px;
+	}
+	&__text {
+		flex-shrink: 0;
+	}
+	&__text-inp {
+		display: inline-block;
+		width: 100%;
+		padding: 13px 40px 13px 15px;
+		margin: 0 0 0 15px;
+		border: 1px solid #e6e6e6;
+		border-radius: 0;
+
+		@include os400;
+		font-size: 16px;
+		line-height: 18px;
+		color: #111;
+
+		appearance: none;
+		&::placeholder {
+			color: #444;
+			text-transform: uppercase;
+		}
+		&:focus {
+			outline: 2px solid #444;
+			&:invalid {
+				outline: 2px solid #ff8282;
+			}
+			& + .form__input-icon path {
+				fill: #68b738;
+			}
+		}
+		&:focus:invalid {
+			& + .form__input-icon path {
+				fill: #ff8282;
+			}
+		}
+	}
+	&__group--radio {
+		padding: 25px 20px 9px;
+		margin-bottom: 30px;
+		border-top: 1px solid #ededed;
+		border-bottom: 1px solid #ededed;
+		// добавляем флажок при выбранном радио-инпуте/
+		input[type="radio"]:checked {
+			& + .form__radio-indicator {
+				position: relative;
+				&::after {
+					content: '';
+
+					position: absolute;
+					top: 50%;
+					left: 50%;
+
+					width: 12px;
+					height: 12px;
+					transform: translate(-50%, -50%);
+
+					border-radius: 50%;
+					background-color: #68b738;
+				}
+			}
+		}
+	}
+	&__label--radio {
+		margin: 0 0 13px;
+
+		cursor: pointer;
+		&:active {
+			opacity: 0.3;
+		}
+	}
+	&__radio-indicator {
+		width: 30px;
+		height: 30px;
+		margin: 0 15px 0 0;
+		border: 1px solid #cecece;
+		border-radius: 50%;
+	}
+	&__group--contacts {
+		margin: 0 auto 16px;
+	}
+	&__title {
+		padding: 0 15px 0 0;
+		margin: 0 0 30px;
+
+		position: relative;
+
+		@include os400;
+		font-size: 24px;
+		line-height: 24px;
+		color: #000;
+
+		background-color: #fff;
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 14px;
+			left: 0;
+			z-index: -1;
+
+			width: 100vw;
+			height: 2px;
+
+			background-color: #68b738;
+		}
+	}
+	&__title--contacts {
+		width: 200px;
+	}
+	&__input-icon {
+		position: absolute;
+
+		top: 50%;
+		right: 16px;
+
+		transform: translateY(-50%);
+	}
+	&__input-icon--phone {
+		right: 13px;
+	}
+	&__group--textarea {
+		margin: 0 auto 30px;
+	}
+	&__textarea {
+		width: 100%;
+		height: 150px;
+		padding: 15px;
+		border-radius: 0;
+		resize: none;
+		border: 1px solid #e6e6e6;
+
+		appearance: none;
+
+		@include os400;
+		font-size: 16px;
+		line-height: 18px;
+		color: #111;
+		&::placeholder {
+			color: #444;
+			text-transform: uppercase;
+		}
+		&:focus {
+			outline: 2px solid #444;
+		}
+	}
+	&__group--checkbox {
+		margin: 0 auto 20px;
+	}
+	&__label--checkbox {
+		margin: 0 0 13px;
+
+		cursor: pointer;
+		&:active {
+			opacity: 0.3;
+		}
+	}
+	&__checkbox-indicator {
+		width: 30px;
+		height: 30px;
+		margin: 0 15px 0 0;
+		border: 1px solid #cfcfcf;
+
+		position: relative;
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 0;
+			left: 9px;
+
+			width: 12px;
+			height: 20px;
+			border: solid #68b738;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg) scale(0);
+
+			transition: all 0.2s;
+		}
+	}
+	&__group--checkbox {
+		// добавляем флажок при выбранном чекбоксе/
+		input[type="checkbox"]:checked {
+			& + .form__checkbox-indicator::after {
+				transform: rotate(45deg) scale(1);
+			}
+		}
+	}
+	&__submit-btn {
+		width: 280px;
+		margin: 0 auto 22px;
+		border: none;
+	}
+	&__descr {
+		display: block;
+		width: 160px;
+		margin: 0 auto;
+
+		line-height: 16px;
+	}
+}
 
 @import 'media';
